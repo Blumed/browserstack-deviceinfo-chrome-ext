@@ -9,11 +9,11 @@
 
 <body id="jessieTheBody">
     <h1 class="txt-center">Browserstack Deviceinfo</h1>
-    <table border="1" cellpadding="3" style="border-collapse:collapse;" width="100%">
-        <!--<tr>
+    <table id="device-data" border="1" cellpadding="3" style="border-collapse:collapse;" width="100%">
+        <tr>
             <td nowrap>Device</td>
             <td align="right"><span id="device">N/A</span></td>
-        </tr>-->
+        </tr>
         <tr>
             <td nowrap>Browser</td>
             <td align="right"><span id="browser">N/A</span></td>
@@ -35,6 +35,10 @@
             <td align="right"><span id="screen">N/A</span></td>
         </tr>
         <tr>
+            <td nowrap>Url</td>
+            <td align="right"><span id="url">N/A</span></td>
+        </tr>
+        <tr>
             <td nowrap>Date</td>
             <td align="right"><span id="date">N/A</span></td>
         </tr>
@@ -43,9 +47,11 @@
             <td align="right"><span id="time">N/A</span></td>
         </tr>
     </table>
+    <button id="btn-copy" data-clipboard-target="#device-data">Copy</button>
 
     <script type="text/javascript" src="assets/js/vendor/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/moment-2.18.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/clipboard.min.js"></script>
     <script type="text/javascript" src="assets/js/popup.js"></script>
 </body>
 

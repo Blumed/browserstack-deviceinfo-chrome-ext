@@ -9,15 +9,28 @@
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 
     "permissions": [
-        "tabs", "<all_urls>"
+        "tabs", "<all_urls>",
+        "storage"
     ],
+
+    "web_accessible_resources": [
+      "assets/js/global-variables.js"
+    ],
+    "externally_connectable": {
+      "matches": ["*://*.browserstack.com/*"]
+    },
 
     "content_scripts": [{
         "matches": [
             "*://*.browserstack.com/*"
         ],
         "css": ["assets/css/main.css"],
-        "js": ["assets/js/vendor/jquery-2.2.3.min.js", "assets/js/vendor/moment-2.18.1.min.js", "assets/js/contentScript.js"],
+        "js": [
+          "assets/js/vendor/jquery-2.2.3.min.js",
+          "assets/js/vendor/moment-2.18.1.min.js",
+          "assets/js/vendor/clipboard.min.js",
+          "assets/js/contentScript.js"
+        ],
 
         "run_at": "document_end",
         "all_frames": true
@@ -31,7 +44,7 @@
         "default_icon": "assets/images/icon128.png",
         "default_popup": "popup.html"
     },
-    "icons": { 
+    "icons": {
             "16": "assets/images/icon16.png",
            "48": "assets/images/icon48.png",
           "128": "assets/images/icon128.png"

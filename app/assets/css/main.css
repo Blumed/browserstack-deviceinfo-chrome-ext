@@ -10,6 +10,14 @@ body#jessieTheBody {
     overflow: hidden;
 }
 
+#btn-copy {
+  background: #B90504;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}
 
 /* Colors */
 
