@@ -1,52 +1,41 @@
 {
-    "manifest_version": 2,
+  "manifest_version": 2,
 
-    "name": "Browserstack Deviceinfo",
-    "description": "Retrieve device information your testing for better bug tracking communication",
-    "version": "0.0.1",
-    "offline_enabled": true,
+  "name": "Browserstack Deviceinfo",
+  "description": "Retrieve device information your testing for better bug tracking communication",
+  "version": "0.0.1",
+  "offline_enabled": true,
 
-    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 
-    "permissions": [
-        "tabs", "<all_urls>",
-        "storage"
+  "permissions": ["tabs", "<all_urls>"],
+
+  "content_scripts": [{
+    "matches": ["*://*.browserstack.com/*"],
+    "css": ["assets/css/main.css"],
+    "js": [
+      "assets/js/vendor/jquery-2.2.3.min.js",
+      "assets/js/vendor/moment-2.18.1.min.js",
+      "assets/js/vendor/clipboard.min.js",
+      "assets/js/contentScript.js"
     ],
 
-    "web_accessible_resources": [
-      "assets/js/global-variables.js"
-    ],
-    "externally_connectable": {
-      "matches": ["*://*.browserstack.com/*"]
-    },
+    "run_at": "document_end",
+    "all_frames": true
+  }],
 
-    "content_scripts": [{
-        "matches": [
-            "*://*.browserstack.com/*"
-        ],
-        "css": ["assets/css/main.css"],
-        "js": [
-          "assets/js/vendor/jquery-2.2.3.min.js",
-          "assets/js/vendor/moment-2.18.1.min.js",
-          "assets/js/vendor/clipboard.min.js",
-          "assets/js/contentScript.js"
-        ],
+  "background": {
+    "persistent": true,
+    "scripts": ["assets/js/background.js"]
+  },
 
-        "run_at": "document_end",
-        "all_frames": true
-    }],
-
-    "background": {
-        "persistent": true,
-        "scripts": ["assets/js/background.js"]  },
-
-    "browser_action": {
-        "default_icon": "assets/images/icon128.png",
-        "default_popup": "popup.html"
-    },
-    "icons": {
-            "16": "assets/images/icon16.png",
-           "48": "assets/images/icon48.png",
-          "128": "assets/images/icon128.png"
-    }
+  "browser_action": {
+    "default_icon": "assets/images/icon128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  }
 }

@@ -3,70 +3,38 @@ chrome.runtime.sendMessage({
   subject: 'showPageAction'
 });
 
-function injectScript(file, node) {
-    var th = document.getElementsByTagName(node)[0];
-    var s = document.createElement('script');
-    s.setAttribute('type', 'text/javascript');
-    s.setAttribute('src', file);
-    th.appendChild(s);
-}
-
-injectScript( chrome.extension.getURL('/assets/js/global-variables.js'), 'body');
-
-var port = chrome.runtime.connect();
-var urlString = '';
-window.addEventListener("message", function(event) {
-  // We only accept messages from ourselves
-  if (event.source != window)
-    return;
-
-  if (event.data.type && (event.data.type == "FROM_PAGE")) {
-    urlString = event.data.url
-    console.log("Content script received: " + urlString);
-    port.postMessage(event.data.url);
-  }
-}, false);
-//console.log('content-script' + ' ' + event.data.url);
-
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener(function (msg, sender, response) {
   // First, validate the message's structure
   if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
     // Collect the necessary data
-    // (For your specific requirements `document.querySelectorAll(...)`
-    //  should be equivalent to jquery's `$(...)`)
-    var deviceOrientation = '';
 
-    orientation()
-
-    var domInfo = {
-        device: $('#device-name').text(),
-        browser: $('#device-info-browser').text(),
-        os: $('#device-info-os').text(),
+    //https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript?page=1&tab=active#tab-top
+    let deviceOrientation = '';
+    let deviceViewport = '';
+    let qd = {};
+    if (location.href) {
+        var re = /(\#|\&)/;
+        location.href.substr(1).split(re).forEach(item => {let [k,v] = item.split("="); v = v && decodeURIComponent(v).replace(/\+/g, " "); (qd[k] = qd[k] || []).push(v)})
+    }
+    (!$('#skinParent').hasClass('rotate270')) ? deviceOrientation = 'Portrait' : deviceOrientation = 'Landscape';
+    $('#device-info-resolution') ? deviceViewport = $('#device-info-viewport').text() : deviceViewport = $('#dockResolution').text();
+    let domInfo = {
+        device: 'undefined' === typeof qd.device ? 'N/A' : qd.device,
+        browser: 'undefined' === typeof qd.browser ? qd.device_browser : qd.browser + ' ' + qd.browser_version,
+        os: qd.os + ' '+ qd.os_version,
         orientation: deviceOrientation,
         resolution:  $('#device-info-resolution').text(),
-        screen: $('#device-info-viewport').text(),
-        url: urlString,
+        screen: deviceViewport,
         date: moment().format('MMMM Do YY'),
         time: moment().format('h:mm:ss a')
-      };
-
-      function orientation() {
-          if (!$('#skinParent').hasClass('rotate270')) {
-              deviceOrientation  = 'Portrait';
-              console.log('portrait');
-          } else {
-              deviceOrientation = 'Landscape'
-              console.log('lasndscape');
-          }
-      }
+    };
       console.log(domInfo.device);
       console.log(domInfo.browser);
       console.log(domInfo.os);
       console.log(domInfo.orientation);
       console.log(domInfo.resolution);
       console.log(domInfo.screen);
-      console.log(domInfo.url);
       console.log(domInfo.date);
       console.log(domInfo.time);
     // Directly respond to the sender (popup),
