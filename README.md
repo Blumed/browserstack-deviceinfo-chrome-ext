@@ -1,4 +1,4 @@
-![logo](/resources/logo.svg)
+![logo](/resources/logo.png)
 
 # Deviceinfo Chrome Extension
 
