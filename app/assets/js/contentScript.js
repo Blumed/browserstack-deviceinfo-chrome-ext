@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
       location.href.substr(1).split(re).forEach(item => { let [k, v] = item.split("="); v = v && decodeURIComponent(v).replace(/\+/g, " "); (qd[k] = qd[k] || []).push(v) })
     }
     (!$('#skinParent').hasClass('rotate270')) ? deviceOrientation = 'Portrait' : deviceOrientation = 'Landscape';
-    ($('#dock').hasClass('is-desktop')) ? (deviceResolution = 'N/A', deviceViewport = $('#dockResolution').text()) : (deviceResolution = $('#device-info-resolution').text(), deviceViewport = $('#device-info-viewport').text());
+    ($('#dock').hasClass('is-desktop')) ? (deviceResolution = 'N/A', deviceViewport = $('#dockResolution').text() + ' px') : (deviceResolution = $('#device-info-resolution').text(), deviceViewport = $('#device-info-viewport').text().replace('dp', 'px'));
 
     // Isolate device viewport width into bootstrap variable
     deviceBootstrap = deviceViewport.match(/(?:(?!\ x).)*/);
