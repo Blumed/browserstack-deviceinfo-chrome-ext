@@ -1,4 +1,4 @@
-<img src ="./resources/logo.png" / alt="logo image" align="center">
+<p align="center"><img src ="./resources/logo.png" / alt="logo image"></p>
 
 # Deviceinfo Chrome Extension
 
