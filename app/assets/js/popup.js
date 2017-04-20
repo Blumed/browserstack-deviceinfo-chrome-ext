@@ -6,6 +6,7 @@ function setDOMInfo(info) {
     document.getElementById('orientation').textContent   = info.orientation;
     document.getElementById('resolution').textContent  = info.resolution;
     document.getElementById('screen').textContent = info.screen;
+    document.getElementById('bootstrap').textContent = info.bootstrap;
     document.getElementById('date').textContent = info.date;
     document.getElementById('time').textContent = info.time;
 }
@@ -24,8 +25,10 @@ window.addEventListener('DOMContentLoaded', function () {
         // ...also specifying a callback to be called
         //    from the receiving end (content script)
         setDOMInfo);
-  });
+    });
 });
+
+// Copy Button Event
 (function(){
     new Clipboard('#btn-copy');
 })();
