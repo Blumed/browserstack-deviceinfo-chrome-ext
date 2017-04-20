@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="262px" viewBox="0 0 80 262" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-390.000000, -613.000000)">
+            <g id="logo" transform="translate(390.000000, 613.000000)">
+                <g id="i-bottom" transform="translate(0.000000, 63.336336)">
+                    <rect id="Rectangle" fill="#22245E" x="0.396039604" y="0" width="39.6039604" height="170.339339"></rect>
+                    <polygon id="Rectangle" fill="#C0C0C0" points="40 0 79.6039604 28.1998522 79.603965 198.539195 40.0000046 170.339343"></polygon>
+                    <polygon id="Rectangle" fill="#919191" points="43.5643564 10.2282282 75.2475248 32.7730504 75.2475248 167.247513 43.5643601 145.271107"></polygon>
+                    <polygon id="Path-2" fill="#54567F" points="0.229733911 170.227929 39.8220916 170.227929 79.269802 198.439306 39.8220916 198.439306"></polygon>
+                    <path d="M61.7051892,176.633634 C65.2048153,176.633634 67.1500633,173.815582 66.0500221,170.339339 C64.9499809,166.863097 61.2212138,164.045045 57.7215877,164.045045 C54.2219616,164.045045 52.2767136,166.863097 53.3767548,170.339339 C54.476796,173.815582 58.2055631,176.633634 61.7051892,176.633634 Z" id="Oval" fill="#919191"></path>
+                </g>
+                <g id="i-top" transform="translate(0.396040, 0.000000)" fill="#22245E">
+                    <rect id="Rectangle-2" x="0" y="0" width="39.6039604" height="39.3393393"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
