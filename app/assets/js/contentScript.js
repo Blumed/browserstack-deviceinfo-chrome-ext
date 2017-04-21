@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
         deviceResolution,
         deviceViewport,
         deviceBootstrap = '';
-    
+
     let qd = {};
     
     if (location.href) {
@@ -43,10 +43,10 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
         resolution:  deviceResolution,
         screen: deviceViewport,
         bootstrap: deviceBootstrap,
+        url: '',
         date: moment().format('MMMM Do YY'),
         time: moment().format('h:mm:ss a')
     };
-
       // console.log(domInfo.device);
       // console.log(domInfo.browser);
       // console.log(domInfo.os);

@@ -2,56 +2,57 @@
 <html>
 
 <head>
-    <title>Looksee</title>
+    <title>Deviceinfo</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
 <body id="jessieTheBody">
-    <h1 class="txt-center">Browserstack Deviceinfo</h1>
-    <table id="device-data" border="1" cellpadding="3" style="border-collapse:collapse;">
+    <h1 class="txt-center">
+        <img class="title-logo" src="assets/images/logo.svg" alt="Logo Deviceinfo"><span class="title-text">Deviceinfo</span></h1>
+    <table id="device-data" border="1" cellpadding="3">
         <tr>
             <td nowrap>Device:</td>
-            <td align="right"><span id="device">N/A</span></td>
+            <td align="right"><span id="device">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Browser:</td>
-            <td align="right"><span id="browser">N/A</span></td>
+            <td align="right"><span id="browser">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>OS:</td>
-            <td align="right"><span id="os">N/A</span></td>
+            <td align="right"><span id="os">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Orientation:</td>
-            <td align="right"><span id="orientation">N/A</span></td>
+            <td align="right"><span id="orientation">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Resolution:</td>
-            <td align="right"><span id="resolution">N/A</span></td>
+            <td align="right"><span id="resolution">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Viewport:</td>
-            <td align="right"><span id="screen">N/A</span></td>
+            <td align="right"><span id="screen">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Bootstrap Size:</td>
-            <td align="right"><span id="bootstrap">N/A</span></td>
+            <td align="right"><span id="bootstrap">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Url:</td>
-            <td align="right"><span></span></td>
+            <td align="right"><span id="url">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Date:</td>
-            <td align="right"><span id="date">N/A</span></td>
+            <td align="right"><span id="date">Not Loaded</span></td>
         </tr>
         <tr>
             <td nowrap>Time:</td>
-            <td align="right"><span id="time">N/A</span></td>
+            <td align="right"><span id="time">Not Loaded</span></td>
         </tr>
     </table>
-    <button id="btn-copy" data-clipboard-target="#device-data">Copy</button>
+    <button id="btn-copy" data-clipboard-target="#device-data"><span>Copy</span></button>
 
     <script type="text/javascript" src="assets/js/vendor/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="assets/js/vendor/moment-2.18.1.min.js"></script>

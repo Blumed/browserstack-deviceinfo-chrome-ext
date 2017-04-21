@@ -1,5 +1,6 @@
+
 // Update the relevant fields with the new data
-function setDOMInfo(info) {
+function setDOMInfo(info) {  
     document.getElementById('device').textContent = info.device;
     document.getElementById('browser').textContent = info.browser;
     document.getElementById('os').textContent = info.os;
@@ -7,6 +8,7 @@ function setDOMInfo(info) {
     document.getElementById('resolution').textContent  = info.resolution;
     document.getElementById('screen').textContent = info.screen;
     document.getElementById('bootstrap').textContent = info.bootstrap;
+  document.getElementById('url').textContent = info.url;
     document.getElementById('date').textContent = info.date;
     document.getElementById('time').textContent = info.time;
 }
@@ -24,7 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
         {from: 'popup', subject: 'DOMInfo'},
         // ...also specifying a callback to be called
         //    from the receiving end (content script)
-        setDOMInfo);
+      setDOMInfo);
     });
 });
 
@@ -32,3 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
 (function(){
     new Clipboard('#btn-copy');
 })();
+
+$('#btn-copy').on('click', function () {
+  $(this).addClass('selected')
+})
