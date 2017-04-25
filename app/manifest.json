@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Deviceinfo from Browserstack",
+  "name": "Browserstack Device Info",
   "description": "Extract device information from Browserstacks emulators",
-  "version": "0.0.1",
+  "version": "1.0.2",
   "offline_enabled": true,
 
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
@@ -21,7 +21,7 @@
     ],
 
     "run_at": "document_end",
-    "all_frames": true
+    "all_frames": false
   }],
 
   "background": {

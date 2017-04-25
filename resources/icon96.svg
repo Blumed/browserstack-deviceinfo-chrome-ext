@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icon96</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon96">
+            <g transform="translate(33.000000, 0.000000)">
+                <g id="i-bottom" transform="translate(0.000000, 23.207207)">
+                    <rect id="Rectangle" fill="#22245E" x="0.144371884" y="0" width="14.4371884" height="62.4144144"></rect>
+                    <polygon id="Rectangle" fill="#C0C0C0" points="14.5815603 0 29.0187487 10.3327703 29.0187504 72.7471859 14.581562 62.4144156"></polygon>
+                    <polygon id="Rectangle" fill="#919191" points="15.8809072 3.74774775 27.430658 12.0084459 27.430658 61.2815315 15.8809086 53.2291079"></polygon>
+                    <polygon id="Path-2" fill="#5C62FF" points="0.0837469718 62.3735923 14.5167057 62.3735923 28.8969349 72.7105856 14.5167057 72.7105856"></polygon>
+                    <path d="M22.4939484,64.7207207 C23.7696986,64.7207207 24.4788174,63.6881522 24.0778095,62.4144144 C23.6768016,61.1406766 22.3175205,60.1081081 21.0417703,60.1081081 C19.76602,60.1081081 19.0569013,61.1406766 19.4579092,62.4144144 C19.8589171,63.6881522 21.2181982,64.7207207 22.4939484,64.7207207 Z" id="Oval" fill="#919191"></path>
+                </g>
+                <g id="i-top" transform="translate(0.144372, 0.000000)" fill="#22245E">
+                    <rect id="Rectangle-2" x="0" y="0" width="14.4371884" height="14.4144144"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

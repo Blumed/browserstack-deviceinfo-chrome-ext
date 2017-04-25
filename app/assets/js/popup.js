@@ -8,7 +8,7 @@ function setDOMInfo(info) {
     document.getElementById('resolution').textContent  = info.resolution;
     document.getElementById('screen').textContent = info.screen;
     document.getElementById('bootstrap').textContent = info.bootstrap;
-  document.getElementById('url').textContent = info.url;
+    document.getElementById('url').textContent = info.url;
     document.getElementById('date').textContent = info.date;
     document.getElementById('time').textContent = info.time;
 }
